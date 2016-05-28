@@ -41,7 +41,7 @@ public class MainActivity extends Activity {
                 String Num1 = meditNum1.getText().toString();
                 String Num2 = meditNum2.getText().toString();
 
-                Integer result = Integer.parseInt(Num1) + Integer.parseInt(Num2);
+                Double  result = Double.parseDouble(Num1) + Double.parseDouble(Num2);
 
                 mtextviewResult.setText("계산결과 " + result.toString());
 
@@ -56,7 +56,7 @@ public class MainActivity extends Activity {
                 String Num1 = meditNum1.getText().toString();
                 String Num2 = meditNum2.getText().toString();
 
-                Integer result = Integer.parseInt(Num1) - Integer.parseInt(Num2);
+                Double  result = Double.parseDouble(Num1) - Double.parseDouble(Num2);
 
                 mtextviewResult.setText("계산결과 " + result.toString());
 
@@ -71,7 +71,7 @@ public class MainActivity extends Activity {
                 String Num1 = meditNum1.getText().toString();
                 String Num2 = meditNum2.getText().toString();
 
-                Integer result = Integer.parseInt(Num1) * Integer.parseInt(Num2);
+                Double  result = Double.parseDouble(Num1) * Double.parseDouble(Num2);
 
                 mtextviewResult.setText("계산결과 " + result.toString());
 
@@ -86,7 +86,8 @@ public class MainActivity extends Activity {
                 String Num1 = meditNum1.getText().toString();
                 String Num2 = meditNum2.getText().toString();
 
-                Integer result = Integer.parseInt(Num1) / Integer.parseInt(Num2);
+                //Integer result = Integer.parseInt(Num1) / Integer.parseInt(Num2);
+                Double  result = Double.parseDouble(Num1) / Double.parseDouble(Num2);
 
                 mtextviewResult.setText("계산결과 " + result.toString());
 
