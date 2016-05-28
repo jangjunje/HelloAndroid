@@ -39,7 +39,7 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/btnMultiplex"
+        android:id="@+id/btnMultiply"
         android:text="곱하기"
         android:textSize="20dp"
         android:layout_margin="20dp"/>
@@ -52,35 +52,12 @@
         android:textSize="20dp"
         android:layout_margin="20dp"/>
 
-
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="아래에 이름을 입력"
+        android:text="계산결과"
         android:gravity="center_horizontal"
-        android:textSize="30dp"/>
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="fill text"
-        android:layout_margin="50dp"
-        android:id="@+id/etName"/>
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="확인"
-        android:textSize="30dp"
-        android:id="@+id/btnOk"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="안녕하세요 : "
-        android:textSize="30dp"
-        android:textColor="#00ff00"
-        android:layout_marginTop="100dp"
-        android:id="@+id/tvName"/>
+        android:textSize="20dp"
+        android:id="@+id/textResult"/>
 
 </LinearLayout>
