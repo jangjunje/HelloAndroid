@@ -87,9 +87,13 @@ public class MainActivity extends Activity {
                 String Num2 = meditNum2.getText().toString();
 
                 //Integer result = Integer.parseInt(Num1) / Integer.parseInt(Num2);
-                Double  result = Double.parseDouble(Num1) / Double.parseDouble(Num2);
 
-                mtextviewResult.setText("계산결과 " + result.toString());
+                if(Double.parseDouble(Num2) != 0) {
+                    Double result = Double.parseDouble(Num1) / Double.parseDouble(Num2);
+                    mtextviewResult.setText("계산결과 " + result.toString());
+                } else {
+                    mtextviewResult.setText("0으로 나눌수 없습니다.");
+                }
 
                 return false;
             }
