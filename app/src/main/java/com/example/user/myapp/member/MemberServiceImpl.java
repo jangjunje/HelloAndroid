@@ -1,30 +1,33 @@
 package com.example.user.myapp.member;
 
-import android.app.Activity;
+import android.view.View;
 
 /**
  * Created by USER on 2016-06-11.
  */
-public class MeberServiceImpl extends Activity implements MemberService{
-    MemberDAO dao = new MemberDAO(this.getApplicationContext());
-
+public class MemberServiceImpl implements View.OnClickListener, MemberService {
     @Override
     public String signup(MembereBean member) {
-        return dao.signup(member);
+        return null;
     }
 
     @Override
     public MembereBean login(MembereBean member) {
-        return dao.login(member);
+        return null;
     }
 
     @Override
     public MembereBean update(MembereBean member) {
-        return dao.update(member);
+        return null;
     }
 
     @Override
     public String delete(MembereBean member) {
-        return dao.delete(member);
+        return null;
+    }
+
+    @Override
+    public void onClick(View v) {
+
     }
 }

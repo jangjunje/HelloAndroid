@@ -39,6 +39,15 @@ public class MemberDAO extends SQLiteOpenHelper{
 
     public MembereBean login(MembereBean member) {
         MembereBean mem = new MembereBean();
+        mem.setId(member.getId());
+        mem.setPw(member.getPw());
+        mem.setEmail(member.getEmail());
+        mem.setName(member.getName());
+
+        Log.i("namn ", mem.getName());
+        Log.i("id ", mem.getId());
+        Log.i("email ", mem.getEmail());
+        Log.i("pw ", mem.getPw());
         return mem;
     }
 

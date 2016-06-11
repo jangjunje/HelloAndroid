@@ -15,6 +15,7 @@ import android.widget.TextView;
 import com.example.user.myapp.R;
 import com.example.user.myapp.member.MeberServiceImpl;
 import com.example.user.myapp.member.MemberService;
+import com.example.user.myapp.member.MemberServiceImpl;
 import com.example.user.myapp.member.MembereBean;
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
@@ -59,7 +60,7 @@ public class SignupActivity extends Activity implements View.OnClickListener {
         String email = meditEmail.getText().toString();
 
         MembereBean member = new MembereBean();
-        MemberService service = new MeberServiceImpl();
+        MemberService service =  (MemberService) new MemberServiceImpl();
 
         member.setId(id);
         member.setName(name);
