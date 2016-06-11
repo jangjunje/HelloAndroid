@@ -16,7 +16,7 @@ public class MainActivity extends Activity {
     Button   mbtnPlus;
     Button   mbtnMinus;
     Button   mbtnMultiply;
-    Button   mbtnDivided;
+    Button   mbtnDivide;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +30,7 @@ public class MainActivity extends Activity {
         mbtnPlus     = (Button)findViewById(R.id.btnPlus);
         mbtnMinus    = (Button)findViewById(R.id.btnMinus);
         mbtnMultiply = (Button)findViewById(R.id.btnMultiply);
-        mbtnDivided  = (Button)findViewById(R.id.btnDivided);
+        mbtnDivide  = (Button)findViewById(R.id.btnDivide);
 
         mtextviewResult  = (TextView) findViewById(R.id.textResult);
 
@@ -38,10 +38,7 @@ public class MainActivity extends Activity {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
 
-                String Num1 = meditNum1.getText().toString();
-                String Num2 = meditNum2.getText().toString();
-
-                Double  result = Double.parseDouble(Num1) + Double.parseDouble(Num2);
+                Double  result = Double.parseDouble(meditNum1.toString()) + Double.parseDouble(meditNum2.toString());
 
                 mtextviewResult.setText("계산결과 " + result.toString());
 
@@ -53,10 +50,7 @@ public class MainActivity extends Activity {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
 
-                String Num1 = meditNum1.getText().toString();
-                String Num2 = meditNum2.getText().toString();
-
-                Double  result = Double.parseDouble(Num1) - Double.parseDouble(Num2);
+                Double  result = Double.parseDouble(meditNum1.toString()) - Double.parseDouble(meditNum2.toString());
 
                 mtextviewResult.setText("계산결과 " + result.toString());
 
@@ -68,10 +62,7 @@ public class MainActivity extends Activity {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
 
-                String Num1 = meditNum1.getText().toString();
-                String Num2 = meditNum2.getText().toString();
-
-                Double  result = Double.parseDouble(Num1) * Double.parseDouble(Num2);
+                Double  result = Double.parseDouble(meditNum1.toString()) * Double.parseDouble(meditNum2.toString());
 
                 mtextviewResult.setText("계산결과 " + result.toString());
 
@@ -79,17 +70,12 @@ public class MainActivity extends Activity {
             }
         });
 
-        mbtnDivided.setOnTouchListener(new View.OnTouchListener() {
+        mbtnDivide.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
 
-                String Num1 = meditNum1.getText().toString();
-                String Num2 = meditNum2.getText().toString();
-
-                //Integer result = Integer.parseInt(Num1) / Integer.parseInt(Num2);
-
-                if(Double.parseDouble(Num2) != 0) {
-                    Double result = Double.parseDouble(Num1) / Double.parseDouble(Num2);
+                if(Double.parseDouble(meditNum2.toString()) != 0) {
+                    Double result = Double.parseDouble(meditNum1.toString()) / Double.parseDouble(meditNum2.toString());
                     mtextviewResult.setText("계산결과 " + result.toString());
                 } else {
                     mtextviewResult.setText("0으로 나눌수 없습니다.");
