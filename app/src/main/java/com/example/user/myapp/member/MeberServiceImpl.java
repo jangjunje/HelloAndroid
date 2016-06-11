@@ -1,27 +1,30 @@
 package com.example.user.myapp.member;
 
+import android.app.Activity;
+
 /**
  * Created by USER on 2016-06-11.
  */
-public class MeberServiceImpl implements MemberService{
+public class MeberServiceImpl extends Activity implements MemberService{
+    MemberDAO dao = new MemberDAO(this.getApplicationContext());
 
     @Override
-    public void signup() {
-
+    public String signup(MembereBean member) {
+        return dao.signup(member);
     }
 
     @Override
-    public void login() {
-
+    public MembereBean login(MembereBean member) {
+        return dao.login(member);
     }
 
     @Override
-    public void update() {
-
+    public MembereBean update(MembereBean member) {
+        return dao.update(member);
     }
 
     @Override
-    public void delete() {
-
+    public String delete(MembereBean member) {
+        return dao.delete(member);
     }
 }
